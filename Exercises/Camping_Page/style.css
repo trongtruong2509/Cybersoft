@@ -1,0 +1,30 @@
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --secondary-color: #f8e1db;
+}
+
+.header {
+    background-color: var(--secondary-color);
+    padding: 12px 48px;
+}
+
+.header .logo {
+    display: inline-block;
+}
+
+.header .navbar {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+    font-weight: 550;
+}
+
+.header .navbar a {
+    text-decoration: none;
+    color: #3a3735;
+}
