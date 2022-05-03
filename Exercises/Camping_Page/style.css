@@ -1,15 +1,10 @@
-
-html {
-    padding: 0;
+body {
+    background-color: #faf4f2;
     margin: 0;
 }
 
-:root {
-    --secondary-color: #f8e1db;
-}
-
 .header {
-    background-color: var(--secondary-color);
+    background-color: #f8e1db;
     padding: 12px 48px;
 }
 
@@ -27,4 +22,65 @@ html {
 .header .navbar a {
     text-decoration: none;
     color: #3a3735;
+}
+
+.header .navbar a:hover {
+    color: white;
+}
+
+.carousel {
+    height: 800px;
+    background-image: url(./src/img/BG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.activities {
+    padding: 80px 0;
+}
+
+.activities .title {
+    color: gray;
+    text-align: center;
+}
+
+.activities .title h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.activities .main .row .col {
+    float: left;
+    width: 25%;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.activities .item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.activities .main .item .thumbnail img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.activities .main .item h1 {
+    font-size: 1.25rem;
+}
+
+.activities .main .item p {
+    line-height: 2;
+}
+
+.activities .main .item a {
+    color: #faf4f2;
+    text-decoration: none;
+    background-color: gray;
+    padding: 4px 16px;
+    border-radius: 8px;
 }
