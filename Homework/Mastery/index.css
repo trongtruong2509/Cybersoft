@@ -10,6 +10,25 @@ html {
     font-size: 16px;
 }
 
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    color: #000000;
+    background-color: #fdc800;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 0.25rem;
+}
+
 /* Header */
 .header {
     margin: 1rem 4rem;
@@ -51,24 +70,265 @@ html {
 
 /* Welcome */
 .welcome {
-    margin: 2rem 7rem;
+    margin: 4rem 0;
+}
+
+.welcome .container {
     display: flex;
-    align-items: flex-start;
     gap: 2rem;
 }
 
 .welcome .content p {
-
-}
-.welcome .content p {
-    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    color: darkgray;
+    padding-top: 1.5rem;
 }
 
 .welcome img {
-    width: 40%;
+    width: 50%;
     object-fit: contain;
 }
 
+/* Records */
+.records {
+    padding: 3rem 0;
+    color: #212529;
+    background-color: #f6f6f6;
+}
 
+.records .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
 
+.records .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
 
+.records .item h2 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.records .item p {
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+/* Subject */
+.subject {
+    margin: 6rem 0;
+}
+
+.subject .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.subject .row .col {
+    height: 150px;
+    color: #ffffff;
+    background-color: #002146;
+    border-radius: 0.25rem;
+}
+
+.subject .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.subject .item i {
+    font-size: 2.5rem;
+}
+
+/* Events */
+.events {
+    padding: 5rem 0;
+    background-color: #f6f6f6;
+}
+
+.events h1 {
+    text-transform: capitalize;
+    padding: 1rem 0;
+}
+
+.events .wrapper {
+    text-align: right;
+}
+
+/* Posts */
+.events .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 4rem;
+}
+
+.events .post .row {
+    background-color: #ffffff;
+}
+
+.events .post .col {
+    padding: 0 1rem;
+}
+
+.events .post .item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem 0;
+}
+
+.events .post .col:not(:last-child) > .item {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.events .post .item .content {
+    padding-right: 1rem;
+}
+
+.events .post .item img {
+    width: 30%;
+    margin: 0.3rem 0;
+    border-radius: 0.3rem;
+}
+
+.events .post .item h2 {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.events .post .item span {
+    display: inline-block;
+    color: #585858;
+    padding: 0.75rem 0;
+}
+
+/* Upcomming Events */
+.events .upcomming .col:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.upcomming .item {
+    display: flex;
+    gap: 1rem;
+    background-color: #ffffff;
+    height: 100%;
+    padding: 1rem;
+}
+
+.upcomming .item .calendar > * {
+    display: block;
+    padding: 0 2rem;
+    background-color: #fdc800;
+    text-align: center;
+}
+
+.upcomming .item .calendar h2 {
+    padding-top: 1rem;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+
+.upcomming .item .calendar span {
+    padding: 0.4rem 0;
+    font-weight: 500;
+}
+
+.upcomming .item .calendar p {
+    padding: 0.6rem 0;
+    color: #ffffff;
+    background-color: #002146;
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+}
+
+.upcomming .item .detail h2 {
+    font-size: 1.125rem;
+    text-transform: capitalize;
+    margin-bottom: 1.25rem;
+}
+
+.upcomming .item .detail p { 
+    line-height: 1.5;
+}
+
+.upcomming .item .detail span {
+    display: inline-block;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.upcomming .item .detail > span:first-of-type { 
+    padding-right: 1rem;
+    border-right: 1px solid #eeeeee;
+}
+
+.upcomming .item .detail > span:last-of-type { 
+    padding-left: 1rem;
+}
+
+/* Footer */
+.footer {
+    padding: 3rem 0;
+    color: #ffffff;
+    background-color: #002146;
+    font-size: 0.9rem;
+}
+
+.footer .links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer .links h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+.footer .links p {
+    line-height: 1.5;
+    margin-bottom: 0.7rem;
+}
+
+.footer .links i {
+    color: #fdc800;
+    font-size: 0.75rem;
+    letter-spacing: 0.5rem;
+}
+
+.footer .links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer .links ul a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.footer .copyright {
+    padding-top: 1.5rem;
+    border-top: 1px solid #454545;
+}
+
+.footer .copyright a {
+    text-decoration: none;
+    color: #cccccc;
+}
