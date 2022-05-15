@@ -50,6 +50,10 @@ html {
     color: #e62b4a;
 }
 
+.header .nav-bar-toggler {
+    display: none;
+}
+
 /* Carousel */
 .carousel {
     background-image: url(/src/img/home_slider.jpg);
@@ -154,4 +158,101 @@ html {
 
 .portfolio .info .detail {
     color: #ffffff;
+}
+
+/* Posts */
+.post .main .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    /* grid-template-rows: ; */
+}
+
+.post .main .item {
+    position: relative;
+}
+
+.post .main .item:hover .overlay {
+    display: none;
+}
+
+.post .main .item img {
+    width: 100%;
+    display: block;
+}
+
+.post .main .item-1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.post .main .item-10 {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+}
+
+.post .main .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Experiences */
+.experience {
+    padding: 5rem 0;
+    background-image: url(/src/img/bussiness_img_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.experience .main video {
+    width: 100%;
+}
+
+/* Contact */
+.contact .row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.contact .row .item-left iframe {
+    width: 100%;
+    height: 400%;
+}
+
+.contact .row .item-right form > * {
+    width: 100%;
+}
+
+/* Responsive */
+@media screen and (max-width: 576px) {
+    
+    .header .navbar {
+        display: none;
+    }
+
+    .header .navbar-toggler {
+        display: block;
+        background-color: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 1.5rem;
+    }
+
+    
+    .portfolio .content .col {
+        width: 100%;
+    }   
+
+    .post .main .row {
+        display: block;
+    }
+
+    .post .main .overlay {
+        display: none;
+    }
 }
