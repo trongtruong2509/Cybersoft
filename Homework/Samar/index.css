@@ -36,6 +36,19 @@ body {
     background-position: right center;
 }
 
+.category {
+    color: #f55f8d;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.title {
+    color: #071020;
+    font-size: 4.5rem;
+    margin: 1rem 0;
+    text-transform: capitalize;
+}
+
 /* Header */
 .header {
     padding: 2rem 0;
@@ -112,17 +125,6 @@ body {
     width: 60%;
 }
 
-.carousel .content h4 {
-    color: #f55f8d;
-    font-size: 1.5rem;
-}
-
-.carousel .content h1 {
-    color: #071020;
-    font-size: 5rem;
-    margin: 1rem 0;
-}
-
 .carousel .content p {
     font-size: 1.125rem;
     margin-bottom: 1rem;
@@ -154,7 +156,93 @@ body {
     width: 570px;
 }
 
+/* Services */
+.service {
+    padding: 5rem 0;
+    text-align: center;
+    background-image: url("./src/img/bg2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+ 
+.service .container .row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+} 
 
+.service .row .col {
+    min-width: 250px;
+    padding: 2rem 2rem;
+    background-color: #fffffe;
+    width: calc((100% - 4rem) /3);
+    border-radius: 0.5rem;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;   */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.5s ease 0.1s;
+}
+
+.service .row .col:hover {
+    transform: translateY(-1.25rem);
+}
+
+.service .row .col .item img {
+    width: 70%;
+}
+
+.service .item h3 {
+    color: #071020;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    text-transform: capitalize;
+}
+
+/* About */
+.about {
+    position: relative;
+}
+
+.about .container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.about .wrapper {
+    width: 50%;
+    /* position: absolute; */
+    /* left: -17%; */
+}
+
+.about .wrapper img {
+    width: 100%;
+    margin-left: -15%;
+    border-radius: 0 100px 100px 0;
+}
+
+.about .content {
+    width: 50%;
+}
+
+.about .content ul {
+    margin: 1rem 0 2rem;
+}
+
+.about .content ul li {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 0.75rem 0;
+}
+
+.about .content li i {
+    color: #f55f8d;
+    font-size: 1.5rem;
+}
 
 /* ================================= */
 
