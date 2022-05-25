@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
@@ -52,10 +53,10 @@
     <section class="carousel">
         <div class="container">
             <div class="content">
-                <h4 class="category">We are The Best</h4>
-                <h1 class="title">Freelance Product Designer Running</h1>
-                <p>We develop the relationships that underpin the next phase in your <br> organisation's growth.</p>
-                <ul>
+                <h4 class="category animate__animated animate__fadeInUp">We are The Best</h4>
+                <h1 class="title animate__animated animate__fadeInUp animate__delay-1s">Freelance Product Designer Running</h1>
+                <p class="animate__animated animate__fadeInUp animate__delay-2s">We develop the relationships that underpin the next phase in your <br> organisation's growth.</p>
+                <ul class="animate__animated animate__fadeInUp animate__delay-3s">
                     <li>
                         <i class="fa-solid fa-check"></i>
                         Master's degree in designing
@@ -65,9 +66,9 @@
                         Outstanding mobile design
                     </li>
                 </ul>
-                <button class="btn-get">Get started</button>
+                <button class="btn-get animate__animated animate__fadeInUp animate__delay-4s">Get started</button>
             </div>
-            <div class="img-wrapper">
+            <div class="img-wrapper animate__animated animate__fadeInUp animate__delay-3s">
                 <img src="./src/img/pic3_1.png" alt="Carousel picture">
             </div>
         </div>
@@ -104,7 +105,7 @@
 
     <section class="about">
         <div class="container">
-            <div class="wrapper">
+            <div class="wrapper wow animate__ animate__fadeInLeft animated" data-wow-duration="2s" data-wow-delay="0.2s" style="animation-name: fadeInLeft;">
                 <img src="./src/img/pic1.jpg" alt="Pic About">
             </div>
             <div class="content">
@@ -138,25 +139,25 @@
         <div class="container">
             <div class="item">
                 <i class="fa-solid fa-face-smile-beam"></i>
-                <h1>18 MI</h1>
+                <h1><span class="counter">18</span> MI</h1>
                 <p>Satisfied Clients</p>
             </div>
-            
+          
             <div class="item">
                 <i class="fa-solid fa-computer"></i>
-                <h1>20 MI</h1>
+                <h1><span class="counter">20</span> MI</h1>
                 <p>Project Completed</p>
             </div>
             
             <div class="item">
                 <i class="fa-solid fa-rocket"></i>
-                <h1>30 MI</h1>
+                <h1 ><span class="counter">30</span> MI</h1>
                 <p>Project Lunched</p>
             </div>
             
             <div class="item">
                 <i class="fa-solid fa-shuttle-space"></i>
-                <h1>50</h1>
+                <h1><span class="counter">50</span></h1>
                 <p>Years Completed</p>
             </div>
             
@@ -368,7 +369,57 @@
             <h1 class="title">latest news & blog</h1>
         </header>
         <main>
-            
+            <div class="owl-carousel owl-theme container">
+                <div class="item">
+                    <header>
+                        <img src="./src/img/pic1_1.jpg" alt="">
+                        <p>23 march 2022</p>
+                    </header>
+                    <main>
+                        <h2>Lorem ipsum dolor sit amet, consectetur.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odio harum quia! Quod, possimus beatae.</p>
+                    </main>
+                    <footer>
+                        <i class="fa-solid fa-user"></i>
+                        <p>BY <span>JOHN DOE</span></p>
+                        <i class="fa-solid fa-message"></i>
+                        <p>COMMENTS 15</p>
+                    </footer>
+                </div>
+                <div class="item">
+                    <header>
+                        <img src="./src/img/pic2.jpg" alt="">
+                        <p>23 march 2022</p>
+                    </header>
+                    <main>
+                        <h2>Lorem ipsum dolor sit amet, consectetur.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odio harum quia! Quod, possimus beatae.</p>
+                    </main>
+                    <footer>
+                        <i class="fa-solid fa-user"></i>
+                        <p>BY <span>JOHN DOE</span></p>
+                        <i class="fa-solid fa-message"></i>
+                        <p>COMMENTS 15</p>
+                    </footer>
+                </div>
+                <div class="item">
+                    <header>
+                        <img src="./src/img/pic3.jpg" alt="">
+                        <p>23 march 2022</p>
+                    </header>
+                    <main>
+                        <h2>Lorem ipsum dolor sit amet, consectetur.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odio harum quia! Quod, possimus beatae.</p>
+                    </main>
+                    <footer>
+                        <i class="fa-solid fa-user"></i>
+                        <p>BY <span>JOHN DOE</span></p>
+                        <i class="fa-solid fa-message"></i>
+                        <p>COMMENTS 15</p>
+                    </footer>
+                </div>
+                
+            </div>
         </main>
     </section>
     <footer class="footer">
@@ -439,8 +490,38 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        // new WOW().init();
+    </script>
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/countUp/jquery.countup.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin: 30,
+            nav:false,
+            dots:false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:3
+                }
+            }
+        });
+
+        $('.counter').countUp({
+            delay: 5,
+            time: 2000
+        });
+    </script>
 </body>
 </html>
