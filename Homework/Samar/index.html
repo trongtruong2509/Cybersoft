@@ -411,11 +411,43 @@
             <h1 class="title">What our clients say's</h1>
         </header>
         <main class="main">
-            <div class="avatars">
-
-            </div>
-            <div class="comment">
-
+            <div class="owl-carousel owl-carousel-testimonial owl-theme container">
+                <div class="item">
+                    <header>
+                        <img src="./src/img/pic1_4.jpg" alt="">
+                        <!-- <p>23 march 2022</p> -->
+                    </header>
+                    <main>
+                        <i class="fa-solid fa-quote-left"></i>
+                        <h3>Cak Dikin 1</h3>
+                        <span>CEO & Founder</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nam maiores, quaerat ullam voluptatibus, fuga aperiam porro voluptatum optio ex explicabo eaque corporis incidunt recusandae?</p>
+                    </main>
+                </div>
+                <div class="item">
+                    <header>
+                        <img src="./src/img/pic3_3.jpg" alt="">
+                        
+                    </header>
+                    <main>
+                        <i class="fa-solid fa-quote-left"></i>
+                        <h3>Cak Dikin 1</h3>
+                        <span>CEO & Founder</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nam maiores, quaerat ullam voluptatibus, fuga aperiam porro voluptatum optio ex explicabo eaque corporis incidunt recusandae?</p>
+                    </main>
+                </div>
+                <div class="item">
+                    <header>
+                        <img src="./src/img/pic2_3.jpg" alt="">
+                        
+                    </header>
+                    <main>
+                        <i class="fa-solid fa-quote-left"></i>
+                        <h3>Cak Dikin 1</h3>
+                        <span>CEO & Founder</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nam maiores, quaerat ullam voluptatibus, fuga aperiam porro voluptatum optio ex explicabo eaque corporis incidunt recusandae?</p>
+                    </main>
+                </div>
             </div>
         </main>
     </section>
@@ -425,7 +457,7 @@
             <h1 class="title">latest news & blog</h1>
         </header>
         <main>
-            <div class="owl-carousel owl-theme container">
+            <div class="owl-carousel owl-carousel-blog owl-theme container">
                 <div class="item">
                     <header>
                         <img src="./src/img/pic1_1.jpg" alt="">
@@ -548,11 +580,11 @@
         </main>
         <div class="copyright">
             <div class="container">
-                <p>Copyright © 2022 <a href="">TrongTruong2509</a>. All rights reserved.</p>
+                <p>Copyright © 2022 <a href="https://github.com/trongtruong2509">TrongTruong2509</a>. All rights reserved.</p>
                 <div class="icons">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/trongtruong.2509/"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/trongtruong.2509/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/trongtruong.2509/"><i class="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
         </div>
@@ -575,11 +607,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/countUp/jquery.countup.min.js"></script>
     <script>
-        $('.owl-carousel').owlCarousel({
+        $('.owl-carousel-blog').owlCarousel({
             loop:true,
             margin: 30,
-            nav:false,
-            dots:false,
+            nav:true,
+            dots:true,
             responsive:{
                 0:{
                     items:1
@@ -593,6 +625,26 @@
             }
         });
 
+        $('.owl-carousel-testimonial').owlCarousel({
+            loop:true,
+            margin: 30,
+            nav:false,
+            dots:true,
+            autoplay:true,
+            autoplayTimeout: 3000,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        });
+
         $('.counter').counterUp({
             delay: 10,
             time: 2000
@@ -601,5 +653,8 @@
 
     <script src="./js/backToTop/main.js"></script>
     <script src="./js/backToTop/util.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.2/dist/js/splide.min.js"></script>
+
 </body>
 </html>
