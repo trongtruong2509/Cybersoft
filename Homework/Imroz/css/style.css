@@ -11957,9 +11957,47 @@ fieldset:disabled .btn {
   }
 }
 
+.btn-primary {
+  letter-spacing: 0.125rem;
+  font-weight: 500 !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-transform: uppercase;
+}
+
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
   color: #FD4766 !important;
   background-color: transparent;
+}
+
+.btn-outline-primary {
+  letter-spacing: 0.125rem;
+  color: #ffffff !important;
+  background-color: transparent !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  font-weight: 500 !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-transform: uppercase;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.active, .open > .dropdown-toggle.btn-outline-primary {
+  background-color: #FD4766 !important;
+  border: 2px solid #FD4766 !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.btn:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.btn-active {
+  background-color: #FD4766 !important;
+  border: 2px solid #FD4766 !important;
+  color: #ffffff !important;
 }
 
 .fs-0 {
@@ -11970,12 +12008,24 @@ fieldset:disabled .btn {
   font-size: 1.125rem !important;
 }
 
+.fw-normaler {
+  font-weight: 500 !important;
+}
+
 .fw-semi-bold {
   font-weight: 600 !important;
 }
 
-.bg-light {
-  border-color: #f6f6f6 !important;
+.bg-darker {
+  background-color: #010001;
+}
+
+.bg-gray-1 {
+  background-color: #f6f6f6;
+}
+
+.bg-gray-2 {
+  background-color: #f9f9f9;
 }
 
 .bg-gra-secondary {
@@ -11986,7 +12036,38 @@ fieldset:disabled .btn {
 }
 
 .py-4-5 {
-  padding: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.px-3-5 {
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+}
+
+.px-4-5 {
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+}
+
+.px-5-5 {
+  padding-left: 3.75rem !important;
+  padding-right: 3.75rem !important;
+}
+
+.py-5-5 {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+}
+
+.py-6 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.my-6 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .rounded-4 {
@@ -12018,31 +12099,145 @@ body {
   z-index: 100;
 }
 
-.header .container .navbar .container-fluid .btn, .header .container .navbar .container-sm .btn, .header .container .navbar .container-md .btn, .header .container .navbar .container-lg .btn, .header .container .navbar .container-xl .btn, .header .container .navbar .container-xxl .btn {
-  padding: 1rem 2.5rem !important;
+.header [class*=logo] {
+  max-height: 60px;
 }
 
-.carousel .carousel-item .overlay h1, .carousel .carousel-item .overlay .h1 {
-  font-size: 6rem;
-  font-weight: 700;
+.header [class*=nav-link] {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header [class*=nav-link]:hover {
+  color: #FD4766 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    position: relative;
+  }
+  .header [class*=btn-outline-primary] {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 18%;
+    padding: 0.5rem 1rem !important;
+  }
+}
+
+.slider .carousel .carousel-item img {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  -o-object-position: center !important;
+     object-position: center !important;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.slider .carousel .carousel-item .carousel-caption {
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  padding: 0 12rem;
+}
+
+.slider .carousel .carousel-item .carousel-caption h1, .slider .carousel .carousel-item .carousel-caption .h1, .slider .carousel .carousel-item .carousel-caption p, .slider .carousel .carousel-item .carousel-caption button {
+  -webkit-animation: 800ms ease-in-out 0s normal none 1 running customOne;
+          animation: 800ms ease-in-out 0s normal none 1 running customOne;
+}
+
+.slider .carousel .carousel-item .carousel-caption h1, .slider .carousel .carousel-item .carousel-caption .h1 {
+  font-size: calc(1.5rem + 5vw) !important;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
 }
 
-.carousel .carousel-item .overlay h1, .carousel .carousel-item .overlay .h1 {
-  font-size: 6rem;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
+.slider .carousel .carousel-item::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.carousel .carousel-item .overlay button {
-  letter-spacing: 2px;
+.slider .carousel .carousel-indicators [data-bs-target] {
+  height: 0.4rem;
+  width: 0.4rem;
+  border-radius: 50%;
+  margin: 0.5rem 0.5rem 3rem;
+  border: 2px solid transparent;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.slider .carousel .carousel-indicators .active {
+  border: 2px solid #FD4766;
+  background: transparent;
+}
+
+.slider .carousel .carousel-control-prev .carousel-control-prev-icon {
+  background-image: url("./../src/img/slick-arrow-left-small.png") !important;
+  background-size: 50%;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.slider .carousel .carousel-control-prev .carousel-control-prev-icon:hover {
+  -webkit-transform: translateX(-1.5rem) !important;
+          transform: translateX(-1.5rem) !important;
+  background-color: #FD4766;
+  border: 2px solid #FD4766;
+}
+
+.slider .carousel .carousel-control-next .carousel-control-next-icon {
+  background-image: url("./../src/img/slick-arrow-right-small.png") !important;
+  background-size: 50%;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.slider .carousel .carousel-control-next .carousel-control-next-icon:hover {
+  -webkit-transform: translateX(1.5rem) !important;
+          transform: translateX(1.5rem) !important;
+  background-color: #FD4766;
+  border: 2px solid #FD4766;
+}
+
+@media screen and (max-width: 768px) {
+  .slider {
+    height: 33vh;
+  }
+  .slider .carousel {
+    height: 100%;
+  }
+  .slider .carousel .carousel-control-prev, .slider .carousel .carousel-control-next {
+    display: none;
+  }
+  .slider [class*=carousel-caption] {
+    padding: 0 !important;
+  }
+  .slider [class*=carousel-caption] h1, .slider [class*=carousel-caption] .h1 {
+    font-size: 2rem;
+  }
+  .slider [class*=carousel-caption] p {
+    font-size: 1rem !important;
+  }
 }
 
 .service main [class*=item]:hover {
   -webkit-transform: translateY(-0.5rem);
           transform: translateY(-0.5rem);
+  cursor: pointer;
 }
 
 .service main [class*=col]:nth-child(2) svg {
@@ -12065,6 +12260,11 @@ body {
   color: #357FF6;
 }
 
+.project main [class*=item]:hover {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
 .project main [class*=item]:hover img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -12075,15 +12275,13 @@ body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #FD4766 100%);
 }
 
-.project main [class*=item]:hover .overlay h2, .project main [class*=item]:hover .overlay .h2, .project main [class*=item]:hover .overlay h6, .project main [class*=item]:hover .overlay .h6 {
+.project main [class*=item]:hover .overlay h2, .project main [class*=item]:hover .overlay .h2, .project main [class*=item]:hover .overlay h6, .project main [class*=item]:hover .overlay .h6, .project main [class*=item]:hover .overlay p {
   -webkit-transform: translateY(-2rem);
           transform: translateY(-2rem);
 }
 
 .project main [class*=item]:hover .overlay p {
   opacity: 1 !important;
-  -webkit-transform: translateY(-2rem);
-          transform: translateY(-2rem);
 }
 
 .project main [class*=overlay] {
@@ -12093,5 +12291,196 @@ body {
 .project main [class*=overlay] h2, .project main [class*=overlay] .h2, .project main [class*=overlay] h6, .project main [class*=overlay] .h6, .project main [class*=overlay] p {
   -webkit-transform: translateY(3rem);
           transform: translateY(3rem);
+}
+
+.news main [class*=item]:hover {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+.news main [class*=item]:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.news main [class*=item]:hover .overlay {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#FD4766));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #FD4766 100%);
+}
+
+.news main [class*=item]:hover .overlay h2, .news main [class*=item]:hover .overlay .h2, .news main [class*=item]:hover .overlay h6, .news main [class*=item]:hover .overlay .h6, .news main [class*=item]:hover .overlay button {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.news main [class*=item]:hover .overlay button {
+  opacity: 1 !important;
+}
+
+.news main [class*=overlay] {
+  height: 70%;
+}
+
+.news main [class*=overlay] h2, .news main [class*=overlay] .h2, .news main [class*=overlay] h6, .news main [class*=overlay] .h6, .news main [class*=overlay] button {
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
+}
+
+.about [class*=about-content] {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.about [class*=about-content] ul {
+  padding: 0;
+}
+
+.about [class*=about-content] ul li {
+  list-style: none;
+  padding: 0.5rem 0;
+}
+
+.about [class*=about-content] ul li i {
+  color: #FD4766;
+  padding-right: 0.5rem;
+}
+
+.about [class*=about-content] ul li p {
+  display: inline;
+}
+
+@media screen and (max-width: 768px) {
+  .about [class*=about-wrapper] {
+    padding-top: 2rem;
+  }
+}
+
+.quotes [class*=row] .col .wrapper p {
+  z-index: 100 !important;
+}
+
+.quotes [class*=row] .col .wrapper .quote-icon {
+  z-index: 1 !important;
+  top: -3.5rem;
+  left: -3.5rem;
+}
+
+.quotes [class*=avatar-item] {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.avatar-active {
+  opacity: 1 !important;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .avatar-active {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.clients [class*=row] {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.clients [class*=row] .col {
+  z-index: 1;
+}
+
+.clients [class*=row] .col .item {
+  height: 13.5rem !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.clients [class*=row] .col .item img {
+  max-width: 9.375rem;
+  max-height: 6.875rem;
+}
+
+.clients [class*=row] .col:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #FD4766;
+  border-radius: 0.5rem;
+  z-index: 100;
+}
+
+.footer .container .header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer .container main .row [class*=copyright] img {
+  max-width: 100%;
+  height: 5rem;
+}
+
+.footer .container main .row [class*=link-item] {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.footer .container main .row [class*=link-item] a {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  width: 100%;
+  background: #010001;
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.footer .container main .row [class*=link-item] a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+}
+
+.footer .container main .row [class*=link-item] a:hover {
+  color: #FD4766 !important;
+}
+
+.footer .container main .row [class*=link-item] a:hover::after {
+  width: 100%;
+}
+
+.footer .container main .row [class*=link-item]:hover {
+  width: 100%;
+}
+
+@-webkit-keyframes customOne {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes customOne {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
