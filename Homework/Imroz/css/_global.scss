@@ -1,0 +1,137 @@
+$primary: #FD4766;
+
+// @import "./../bootstrap/scss/bootstrap";
+@import "../bootstrap/scss/bootstrap";
+
+
+// User define
+$bg-gradient-primary: linear-gradient(to bottom, rgba(0, 0, 0, 0), $primary 100%);
+$bg-gradient-secondary: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, $primary 79.69%);
+
+$color-primary: rgba(29,29,36,.75);
+$color-opacity-1: hsla(0,0%,100%,.2);
+
+.btn-primary {
+    letter-spacing: 0.125rem;
+    font-weight: 500!important;
+    transition: all 0.5s;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: $primary!important;
+    background-color: transparent; 
+}
+
+.btn-outline-primary {
+    letter-spacing: 0.125rem;
+    color: #ffffff!important;
+    background-color: transparent !important;
+    border: 2px solid $color-opacity-1 !important; 
+    font-weight: 500 !important;
+    transition: all 0.5s;
+    text-transform: uppercase;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.active, .open>.dropdown-toggle.btn-outline-primary {
+    background-color: $primary !important; 
+    border: 2px solid $primary !important; 
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn:focus {
+    box-shadow: none !important;
+}
+
+.btn-active {
+    background-color: $primary !important; 
+    border: 2px solid $primary !important; 
+    color: #ffffff !important;
+}
+
+.fs-0 {
+    font-size: calc(1.5rem + 1.5vw) !important;
+}
+
+.fs-5-125 {
+    font-size: 1.125rem !important;
+}
+
+.fw-normaler {
+    font-weight: 500 !important;
+}
+
+.fw-semi-bold {
+    font-weight: 600 !important;
+}
+
+.bg-darker {
+    background-color: #010001;
+}
+
+.bg-gray-1 {
+    background-color: #f6f6f6;
+}
+
+.bg-gray-2 {
+    background-color: #f9f9f9;
+}
+
+.bg-gra-secondary {
+    background: $bg-gradient-secondary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.py-4-5 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.px-3-5 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+}
+
+.px-4-5 {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+}
+
+.px-5-5 {
+    padding-left: 3.75rem !important;
+    padding-right: 3.75rem !important;
+}
+
+.py-5-5 {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+}
+
+.py-6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.my-6 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.rounded-4 {
+    border-radius: 0.75rem !important;
+}
+
+.trans-basic {
+    transition: all 0.65s ease-out;
+}
+
+.trans-basic-1 {
+    transition: all 0.35s ease-out;
+}
+
+.delay-1 {
+    transition-delay: 0.2s;
+}

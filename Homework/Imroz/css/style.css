@@ -12112,7 +12112,7 @@ body {
   color: #FD4766 !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 760px) {
   .header {
     position: relative;
   }
@@ -12123,6 +12123,19 @@ body {
             transform: translateY(-50%);
     right: 18%;
     padding: 0.5rem 1rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .header {
+    position: relative;
+  }
+  .header [class*=btn-outline-primary] {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 12%;
   }
 }
 
@@ -12213,7 +12226,7 @@ body {
   border: 2px solid #FD4766;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   .slider {
     height: 33vh;
   }
@@ -12349,12 +12362,6 @@ body {
   display: inline;
 }
 
-@media screen and (max-width: 768px) {
-  .about [class*=about-wrapper] {
-    padding-top: 2rem;
-  }
-}
-
 .quotes [class*=row] .col .wrapper p {
   z-index: 100 !important;
 }
@@ -12413,6 +12420,40 @@ body {
   z-index: 100;
 }
 
+@media screen and (max-width: 576px) {
+  .clients [class*=row] {
+    border: none;
+  }
+  .clients [class*=row] .col {
+    z-index: 1;
+  }
+  .clients [class*=row] .col .item {
+    height: 8rem !important;
+    border: none;
+  }
+  .clients [class*=row] .col .item img {
+    max-width: 9.375rem;
+    max-height: 4.875rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .clients [class*=row] {
+    border: none;
+  }
+  .clients [class*=row] .col {
+    z-index: 1;
+  }
+  .clients [class*=row] .col .item {
+    height: 8rem !important;
+    border: none;
+  }
+  .clients [class*=row] .col .item img {
+    max-width: 9.375rem;
+    max-height: 4.875rem;
+  }
+}
+
 .footer .container .header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -12456,6 +12497,21 @@ body {
 
 .footer .container main .row [class*=link-item]:hover {
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .footer .container header {
+    display: block !important;
+  }
+  .footer .container header p {
+    width: 100% !important;
+    font-size: 1.75rem !important;
+    font-weight: 600 !important;
+    padding-bottom: 1rem;
+  }
+  .footer .container header button {
+    padding: 0.25rem 0.75rem;
+  }
 }
 
 @-webkit-keyframes customOne {
