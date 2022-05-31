@@ -1,0 +1,42 @@
+$primary: #b61984;
+$text-color-default: #181818;
+$text-color-header: #191919;
+
+@import "./../bootstrap/scss/bootstrap";
+
+
+
+// User defines
+.fs-0 {
+    font-size: calc(1.5rem + 1.75vw) !important;
+}
+
+.fs-7 {
+    font-size: 0.75rem !important;
+}
+
+.fw-normaler {
+    font-weight: 500 !important;
+}
+
+.fw-semibold {
+    font-weight: 600 !important;
+}
+
+// Sizing
+.py-lg-6 {
+    padding: 4rem !important;
+}
+
+.ff-roboto {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.rounded-4 {
+    border-radius: 0.625rem !important;
+}
+
+.rounded-top-4 {
+    border-top-left-radius: 0.625rem !important;
+    border-top-right-radius: 0.625rem !important;
+}

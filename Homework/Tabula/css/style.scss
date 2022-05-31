@@ -1,0 +1,15 @@
+@import "./global";
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: $text-color-default;
+}
+
+.about {
+    background: url('./../src/images/Violet_top_left_wave.png') no-repeat bottom;
+    background-size: contain;
+}
+
+.profiles {
+    background-color: #9b51e0;
+}
