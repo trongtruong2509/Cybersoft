@@ -3,6 +3,30 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: $text-color-default;
+    z-index: 1 !important;
+}
+
+.header {
+    z-index: 100 !important;
+    .navbar-brand {
+        img {
+            width: 80px !important; 
+        }
+    }
+
+    .btn-primary {
+        padding: 0.75rem 1.25rem !important;
+    }
+
+    i:hover {
+        color: $primary !important;
+    }
+
+    .nav-item:hover {
+        .bottom-dot {
+            @include dot-active;
+        }
+    }
 }
 
 .about {
@@ -11,5 +35,106 @@ body {
 }
 
 .profiles {
-    background-color: #9b51e0;
+    background-color: #dcd1f3;
+    background-image: url('./../src/images/Wave_White_bottom_right_shape_01.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+
+    .row {
+        .col {
+            .item {
+                transition: all 0.3s ease-out;
+
+                .thumbnail {
+                    overflow: hidden !important;
+
+                    img {
+                        transition: all 0.5s ease-out;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px !important; 
+
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.course {
+    background-image: url('./../src/images/accent_bottom_wave_01.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+
+    .form {
+        max-width: 25rem;
+
+        .input-group {
+            z-index: 1;
+
+            i {
+                z-index: 100;
+                left: 1.25rem;
+                top: 1.25rem;
+            }
+
+            input {
+                z-index: 1;
+            }
+
+            textarea {
+                height: 7rem;
+            }
+        }
+    }
+}
+
+.footer {
+    background-image: url('./../src/images/footer_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    padding: 7.5rem 0;
+
+    [class*=link-item] {
+        border-color: rgba($color: #000000, $alpha: 0.1) !important;
+
+        a:hover {
+            // color: $primary !important;
+            opacity: 0.3 !important;
+        }
+    }
+
+    input {
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        background: #aa017e !important;
+
+        &::placeholder {
+            color: #ffffff;
+        }
+
+        &:focus, &:focus-visible {
+            border: 1px solid #ffffff !important;
+        }
+    }
+
+    button {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        letter-spacing: 0.125rem !important;
+        transition: all 0.5s;
+
+        &:hover {
+            background-color: #aa017e !important;
+            border-color: #ffffff !important;
+            color: #ffffff !important;
+        }
+    }
 }

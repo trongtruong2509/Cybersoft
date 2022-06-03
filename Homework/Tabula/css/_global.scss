@@ -4,11 +4,13 @@ $text-color-header: #191919;
 
 @import "./../bootstrap/scss/bootstrap";
 
-
-
 // User defines
 .fs-0 {
     font-size: calc(1.5rem + 1.75vw) !important;
+}
+
+.fs-6-5 {
+    font-size: 13.5px !important;
 }
 
 .fs-7 {
@@ -28,6 +30,15 @@ $text-color-header: #191919;
     padding: 4rem !important;
 }
 
+.py-2-5 {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+}
+
+.ps-4-5 {
+    padding-left: 2.25rem !important;
+}
+
 .ff-roboto {
     font-family: 'Roboto', sans-serif !important;
 }
@@ -39,4 +50,38 @@ $text-color-header: #191919;
 .rounded-top-4 {
     border-top-left-radius: 0.625rem !important;
     border-top-right-radius: 0.625rem !important;
+}
+
+.btn-primary {
+    transition: all 0.5s;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: $primary!important;
+    background-color: #ffffff !important;
+    border-color: $primary !important; 
+}
+
+.dot-active {
+    background-color: #b61984;
+    padding: 0.3rem;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin dot-active {
+    background-color: #b61984;
+    padding: 0.3rem;
+    border-radius: 50%;
+    transition: all 0.5s;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }

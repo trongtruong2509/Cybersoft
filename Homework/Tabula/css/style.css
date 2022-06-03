@@ -11961,6 +11961,10 @@ fieldset:disabled .btn {
   font-size: calc(1.5rem + 1.75vw) !important;
 }
 
+.fs-6-5 {
+  font-size: 13.5px !important;
+}
+
 .fs-7 {
   font-size: 0.75rem !important;
 }
@@ -11977,6 +11981,15 @@ fieldset:disabled .btn {
   padding: 4rem !important;
 }
 
+.py-2-5 {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+.ps-4-5 {
+  padding-left: 2.25rem !important;
+}
+
 .ff-roboto {
   font-family: 'Roboto', sans-serif !important;
 }
@@ -11990,9 +12003,62 @@ fieldset:disabled .btn {
   border-top-right-radius: 0.625rem !important;
 }
 
+.btn-primary {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  color: #b61984 !important;
+  background-color: #ffffff !important;
+  border-color: #b61984 !important;
+}
+
+.dot-active {
+  background-color: #b61984;
+  padding: 0.3rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   color: #181818;
+  z-index: 1 !important;
+}
+
+.header {
+  z-index: 100 !important;
+}
+
+.header .navbar-brand img {
+  width: 80px !important;
+}
+
+.header .btn-primary {
+  padding: 0.75rem 1.25rem !important;
+}
+
+.header i:hover {
+  color: #b61984 !important;
+}
+
+.header .nav-item:hover .bottom-dot {
+  background-color: #b61984;
+  padding: 0.3rem;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .about {
@@ -12001,6 +12067,118 @@ body {
 }
 
 .profiles {
-  background-color: #9b51e0;
+  background-color: #dcd1f3;
+  background-image: url("./../src/images/Wave_White_bottom_right_shape_01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.profiles .row .col .item {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.profiles .row .col .item .thumbnail {
+  overflow: hidden !important;
+}
+
+.profiles .row .col .item .thumbnail img {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.profiles .row .col .item:hover {
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px !important;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px !important;
+}
+
+.profiles .row .col .item:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.course {
+  background-image: url("./../src/images/accent_bottom_wave_01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.course .form {
+  max-width: 25rem;
+}
+
+.course .form .input-group {
+  z-index: 1;
+}
+
+.course .form .input-group i {
+  z-index: 100;
+  left: 1.25rem;
+  top: 1.25rem;
+}
+
+.course .form .input-group input {
+  z-index: 1;
+}
+
+.course .form .input-group textarea {
+  height: 7rem;
+}
+
+.footer {
+  background-image: url("./../src/images/footer_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 7.5rem 0;
+}
+
+.footer [class*=link-item] {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.footer [class*=link-item] a:hover {
+  opacity: 0.3 !important;
+}
+
+.footer input {
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background: #aa017e !important;
+}
+
+.footer input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.footer input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.footer input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.footer input::placeholder {
+  color: #ffffff;
+}
+
+.footer input:focus, .footer input:focus-visible {
+  border: 1px solid #ffffff !important;
+}
+
+.footer button {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  letter-spacing: 0.125rem !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.footer button:hover {
+  background-color: #aa017e !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
 }
 /*# sourceMappingURL=style.css.map */

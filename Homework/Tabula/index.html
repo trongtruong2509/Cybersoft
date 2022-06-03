@@ -15,44 +15,76 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-  <header>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar scroll</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+<body class="position-relative">
+  <header class="header position-absolute top-0 start-0 w-100 bg-transparent">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-0">
+      <div class="container">
+        <a class="navbar-brand py-0 my-0" href="#">
+          <img class="" src="./src/images/crest.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item pt-3 me-5">
+              <div class="wrapper position-relative">
+                <a class="nav-link text-dark text-capitalize pb-4 fs-6-5 fw-semibold" aria-current="page" href="">Home</a>
+                <div class="bottom-dot"></div>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+            <li class="nav-item pt-3 me-5">
+              <div class="wrapper position-relative">
+                <a class="nav-link text-dark text-capitalize pb-4 fs-6-5 fw-semibold" aria-current="page" href="">About</a>
+                <div class="bottom-dot dot-active"></div>
+              </div>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Link
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+            <li class="nav-item pt-3 me-5">
+              <div class="wrapper position-relative">
+                <a class="nav-link text-dark text-capitalize pb-4 fs-6-5 fw-semibold" aria-current="page" href="">Courses</a>
+                <div class="bottom-dot"></div>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Link</a>
+            <li class="nav-item pt-3 me-5">
+              <div class="wrapper position-relative">
+                <a class="nav-link text-dark text-capitalize pb-4 fs-6-5 fw-semibold " aria-current="page" href="">Blog</a>
+                <div class="bottom-dot"></div>
+              </div>
+            </li>
+            <li class="nav-item pt-3 me-5">
+              <div class="wrapper position-relative">
+                <a class="nav-link text-dark text-capitalize pb-4 fs-6-5 fw-semibold" href="">Shop</a>
+                <div class="bottom-dot"></div>
+              </div>
+            </li>
+            <li class="nav-item pt-3 me-5">
+              <div class="wrapper position-relative">
+                <a class="nav-link text-dark text-capitalize pb-4 fs-6-5 fw-semibold ">Elements</a>
+                <div class="bottom-dot"></div>
+              </div>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+          <button class="btn btn-primary rounded-pill fs-6-5 fw-semibold me-3" type="submit">
+            <i class="fa-solid fa-phone-flip"></i>
+            (+1) 555 234-8765
+          </button>
+          <div class="icons d-flex gap-2">
+            <a class="text-decoration-none text-dark fs-6-5" href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a class="text-decoration-none text-dark fs-6-5" href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a class="text-decoration-none text-dark fs-6-5" href="#">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a class="text-decoration-none text-dark fs-6-5" href="#">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </nav> -->
+    </nav>
   </header>
 
   <section class="about position-relative py-lg-6">
@@ -68,7 +100,7 @@
     <img class="w-100 position-absolute top-0 start-0" src="./src/images/yellow_top_wave_01.png" alt="Background top wave">
   </section>
 
-  <section class="profiles py-5">
+  <section class="profiles pt-5">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-5">
         <div class="col px-4 rounded-4">
@@ -171,9 +203,130 @@
     </div>
   </section>
 
+  <section class="course pt-lg-5 pt-4 mt-3">
+    <div class="container d-flex justify-content-center gap-5">
+      <div class="thumbnail">
+        <img src="./src/images/conatct_inner.png" alt="Contact Image">
+      </div>
+      <form action="">
+        <div class="form px-4 py-5 shadow-sm h-auto d-flex flex-column rounded-4 bg-white">
+          <h1 class="fw-bold text-cappitalize pb-lg-5 pb-4 text-center fs-2">Find Your Course</h1>
+  
+          <div class="input-info d-flex gap-3">
+            <div class="input-group mb-3 position-relative">
+              <i class="fa-regular fa-user position-absolute translate-middle text-primary"></i>
+              <input type="text" class="form-control position-relative rounded-pill ps-4-5 fs-7 py-2-5" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            
+            <div class="input-group mb-3 position-relative">
+              <i class="fa-regular fa-envelope position-absolute translate-middle text-primary"></i>
+              <input type="text" class="form-control rounded-pill ps-4-5 fs-7 py-2-5" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </div>
+          </div>
+          <div class="input-group mb-3 position-relative">
+            <i class="fa-solid fa-graduation-cap position-absolute translate-middle text-primary"></i>
+            <!-- <input type="text" class="form-control rounded-pill ps-4-5 fs-7 py-2-5" id="basic-url" placeholder="English" aria-describedby="basic-addon3"> -->
+            <select class="form-select mb-3 position-relative rounded-pill ps-4-5 fs-7 py-2-5" aria-label="Default select example">
+              <!-- <option selected>Open this select menu</option> -->
+              <option value="1">English</option>
+              <option value="2">French</option>
+              <option value="3">Spanish</option>
+              <option value="3">German</option>
+            </select>
+          </div>
+          <div class="input-group position-relative">
+            <i class="fa-regular fa-message position-absolute text-primary translate-middle textarea-icon"></i>
+            <textarea class="form-control rounded-4 ps-4-5 fs-7 py-2-5" placeholder="Message" aria-label="With textarea"></textarea>
+          </div>
+
+          <div class="submit-group">
+            <button type="submit" class="btn btn-primary mt-5 py-3 px-5 fs-7 fw-semibold rounded-pill">SEND</button>
+          </div>
+        </div> 
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <main class="main d-flex justify-content-between w-100 text-white">
+        <div class="row w-100">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="links me-4">
+              <h2 class="fs-4 text-white text-capitalize fw-bold mb-4">Contact Us</h2>
+              <ul class="list-unstyled d-flex flex-column gap-3">
+                <li class="d-flex gap-2 align-items-center">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p class="text-decoration-none text-white m-0 fs-6-5">Franklin St, Greenpoint Ave</p>
+                </li>
+                <li class="d-flex gap-2 align-items-center">
+                  <i class="fa-solid fa-phone-flip"></i>
+                  <a class="text-decoration-none text-white m-0 fs-6-5">+2342 5446 67</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center">
+                  <i class="fa-solid fa-clock"></i>
+                  <a class="text-decoration-none text-white m-0 fs-6-5">Monday - Friday: 8 AM - 5 PM</a>
+                </li>
+                <li class="d-flex gap-4 py-2">
+                  <a class="text-decoration-none text-white m-0" href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a class="text-decoration-none text-white pb-2" href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a class="text-decoration-none text-white pb-2" href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a class="text-decoration-none text-white pb-2" href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="links me-4">
+              <h2 class="fs-4 text-white text-capitalize fw-bold mb-4">Quick links</h2>
+              <ul class="list-unstyled d-flex flex-column gap-3">
+                <li class="link-item border-bottom pb-2">
+                  <a class="text-decoration-none text-white  fs-6-5" href="#">Home</a>
+                </li>
+                <li class="link-item border-bottom pb-2">
+                  <a class="text-decoration-none text-white fs-6-5" href="#">Course</a>
+                </li>
+                <li class="link-item border-bottom pb-2">
+                  <a class="text-decoration-none text-white fs-6-5" href="#">Schedules</a>
+                </li>
+                <li class="link-item border-bottom pb-2">
+                  <a class="text-decoration-none text-white fs-6-5" href="#">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="links me-4">
+              <h2 class="fs-4 text-white text-capitalize fw-bold mb-4">About</h2>
+              <ul class="list-unstyled d-flex flex-column gap-3">
+                <li class="link-item border-bottom pb-2"><a class="text-decoration-none text-white fs-6-5" href="#">About Us</a></li>
+                <li class="link-item border-bottom pb-2"><a class="text-decoration-none text-white fs-6-5" href="#">Event</a></li>
+                <li class="link-item border-bottom pb-2"><a class="text-decoration-none text-white fs-6-5" href="#">Get Quote</a></li>
+                <li class="link-item border-bottom pb-2"><a class="text-decoration-none text-white fs-6-5" href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <h2 class="fs-4 text-white text-capitalize mb-5 fw-bold">Newsletter</h2>
+            <input type="text" class="form-control text-center w-75 text-white rounded-pill fs-7 py-3" placeholder="Your Email">
+            <button type="submit" class="btn btn-primary mt-4 w-75 py-3 px-5 fs-7 fw-semibold rounded-pill">SUBSCRIBE</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </footer>
+
    <!-- Scripts -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
    crossorigin="anonymous"></script>
 </body>
-</html>
+</html> 
