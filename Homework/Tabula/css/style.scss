@@ -6,16 +6,53 @@ body {
     z-index: 1 !important;
 }
 
+@mixin dot-active {
+    background-color: #b61984;
+    padding: 0.25rem;
+    border-radius: 50%;
+    transition: all 0.5s;
+
+    position: absolute;
+    bottom: -0.175rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot-active {
+    @include dot-active;
+}
+
+.sub-nav {
+    display: none;
+    transform: translate3d(0, -100%, 0) !important;
+    transition: transform 0.5s;
+    z-index: 1000 !important;
+}
+
+.header-visible {
+    display: block !important;
+}
+
+.header-active {
+    transform: none !important;
+}
+
 .header {
-    z-index: 100 !important;
+    // z-index: 1 !important;
+    background-color: transparent !important;
+
     .navbar-brand {
         img {
             width: 80px !important; 
         }
     }
 
-    .btn-primary {
+    .btn-primary-lg {
         padding: 0.75rem 1.25rem !important;
+    }
+
+    .btn-primary-md {
+        padding: 0.4rem 1rem !important;
     }
 
     i:hover {
@@ -30,11 +67,13 @@ body {
 }
 
 .about {
+    z-index: 100 !important;
     background: url('./../src/images/Violet_top_left_wave.png') no-repeat bottom;
     background-size: contain;
 }
 
 .profiles {
+    z-index: 100 !important;
     background-color: #dcd1f3;
     background-image: url('./../src/images/Wave_White_bottom_right_shape_01.png');
     background-repeat: no-repeat;
@@ -67,6 +106,7 @@ body {
 }
 
 .course {
+    z-index: 100 !important;
     background-image: url('./../src/images/accent_bottom_wave_01.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -96,6 +136,7 @@ body {
 }
 
 .footer {
+    z-index: 100 !important;
     background-image: url('./../src/images/footer_background.jpg');
     background-repeat: no-repeat;
     background-size: cover;

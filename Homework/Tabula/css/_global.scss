@@ -39,6 +39,10 @@ $text-color-header: #191919;
     padding-left: 2.25rem !important;
 }
 
+.pb-2-5 {
+    padding-bottom: 0.75rem !important;
+}
+
 .ff-roboto {
     font-family: 'Roboto', sans-serif !important;
 }
@@ -63,25 +67,5 @@ $text-color-header: #191919;
     border-color: $primary !important; 
 }
 
-.dot-active {
-    background-color: #b61984;
-    padding: 0.3rem;
-    border-radius: 50%;
 
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
-@mixin dot-active {
-    background-color: #b61984;
-    padding: 0.3rem;
-    border-radius: 50%;
-    transition: all 0.5s;
-
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}

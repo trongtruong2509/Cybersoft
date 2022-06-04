@@ -13,12 +13,78 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="position-relative">
-  <header class="header position-absolute top-0 start-0 w-100 bg-transparent">
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-0">
-      <div class="container">
+
+  <!-- <div class="sub-nav position-sticky top-0 start-0 zindex-sticky bg-white w-100 shadow-sm">
+    <div class="d-flex justify-content-end container align-items-center" >
+      <ul class="d-flex mb-2 mb-lg-0 list-unstyled me-5">
+        <li class="listnav-item pt-2 me-2">
+          <div class="wrapper position-relative">
+            <a class="nav-link text-dark text-capitalize pb-2-5 fs-6-5 fw-semibold" aria-current="page" href="">Home</a>
+            <div class="bottom-dot"></div>
+          </div>
+        </li>
+        <li class="nav-item pt-2 me-2">
+          <div class="wrapper position-relative">
+            <a class="nav-link text-dark text-capitalize pb-2-5 fs-6-5 fw-semibold" aria-current="page" href="">About</a>
+            <div class="bottom-dot dot-active"></div>
+          </div>
+        </li>
+        <li class="nav-item pt-2 me-2">
+          <div class="wrapper position-relative">
+            <a class="nav-link text-dark text-capitalize pb-2-5 fs-6-5 fw-semibold" aria-current="page" href="">Courses</a>
+            <div class="bottom-dot"></div>
+          </div>
+        </li>
+        <li class="nav-item pt-2 me-2">
+          <div class="wrapper position-relative">
+            <a class="nav-link text-dark text-capitalize pb-2-5 fs-6-5 fw-semibold " aria-current="page" href="">Blog</a>
+            <div class="bottom-dot"></div>
+          </div>
+        </li>
+        <li class="nav-item pt-2 me-2">
+          <div class="wrapper position-relative">
+            <a class="nav-link text-dark text-capitalize pb-2-5 fs-6-5 fw-semibold" href="">Shop</a>
+            <div class="bottom-dot"></div>
+          </div>
+        </li>
+        <li class="nav-item pt-2 me-2">
+          <div class="wrapper position-relative">
+            <a class="nav-link text-dark text-capitalize pb-2-5 fs-6-5 fw-semibold ">Elements</a>
+            <div class="bottom-dot"></div>
+          </div>
+        </li>
+      </ul>
+      <div class="cta">
+        <button class="btn btn-primary btn-primary-md rounded-pill fs-6-5 fw-semibold me-3" type="submit">
+          <i class="fa-solid fa-phone-flip"></i>
+          (+1) 555 234-8765
+        </button>
+      </div>
+      <div class="icons d-flex gap-2 me-5">
+        <a class="text-decoration-none text-dark fs-6-5" href="#">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a class="text-decoration-none text-dark fs-6-5" href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a class="text-decoration-none text-dark fs-6-5" href="#">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a class="text-decoration-none text-dark fs-6-5" href="#">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </div> -->
+
+  <header class="header position-relative top-0 start-0 w-100 bg-transparent">
+    <nav class="navbar navbar-expand-lg py-0 bg-transparent">
+      <div class="container bg-transparent">
         <a class="navbar-brand py-0 my-0" href="#">
           <img class="" src="./src/images/crest.png" alt="Logo">
         </a>
@@ -85,11 +151,14 @@
         </div>
       </div>
     </nav>
+
+    
+
   </header>
 
   <section class="about position-relative py-lg-6">
     <div class="container d-flex justify-content-between align-items-center gap-5 px-5">
-      <div class="content">
+      <div class="content wow animate__ animate__fadeInLeft animated" data-wow-duration="1.5s" data-wow-delay="0.2s" style="animation-name: fadeInLeft;">
         <h3 class="text-uppercase text-primary fs-6 fw-semibold">about us</h3>
         <h1 class="fs-0 fw-bold">The language teaching experts</h1>
       </div>
@@ -103,7 +172,7 @@
   <section class="profiles pt-5">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-5">
-        <div class="col px-4 rounded-4">
+        <div class="col px-4 rounded-4 wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.2s" style="animation-name: fadeIn;">
           <div class="item text-center bg-white rounded-4">
             <header class="thumbnail">
               <img class="w-100 border-top rounded-top-4" src="./src/images/teacher_1.jpg" alt="">
@@ -115,7 +184,7 @@
             </main>
           </div>
         </div>
-        <div class="col px-4 rounded-4">
+        <div class="col px-4 rounded-4 wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.4s" style="animation-name: fadeIn;">
           <div class="item text-center bg-white rounded-4">
             <header class="thumbnail">
               <img class="w-100 border-top rounded-top-4" src="./src/images/teacher_2.jpg" alt="">
@@ -127,7 +196,7 @@
             </main>
           </div>
         </div>
-        <div class="col px-4 rounded-4">
+        <div class="col px-4 rounded-4 wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.6s" style="animation-name: fadeIn;">
           <div class="item text-center bg-white rounded-4">
             <header class="thumbnail">
               <img class="w-100 border-top rounded-top-4" src="./src/images/teacher_3.jpg" alt="">
@@ -139,7 +208,7 @@
             </main>
           </div>
         </div>
-        <div class="col px-4 rounded-4">
+        <div class="col px-4 rounded-4 wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.8s" style="animation-name: fadeIn;">
           <div class="item text-center bg-white rounded-4">
             <header class="thumbnail">
               <img class="w-100 border-top rounded-top-4" src="./src/images/teacher_4.jpg" alt="">
@@ -151,7 +220,8 @@
             </main>
           </div>
         </div>
-        <div class="col px-4 rounded-4">
+        
+        <div class="col px-4 rounded-4 wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.2s" style="animation-name: fadeIn;">
           <div class="item text-center bg-white rounded-4">
             <header class="thumbnail">
               <img class="w-100 border-top rounded-top-4" src="./src/images/teacher_5.jpg" alt="">
@@ -163,7 +233,7 @@
             </main>
           </div>
         </div>
-        <div class="col px-4 rounded-4">
+        <div class="col px-4 rounded-4 wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.4s" style="animation-name: fadeIn;">
           <div class="item text-center bg-white rounded-4">
             <header class="thumbnail">
               <img class="w-100 border-top rounded-top-4" src="./src/images/teacher_6.jpg" alt="">
@@ -175,7 +245,7 @@
             </main>
           </div>
         </div>
-        <div class="col px-4 rounded-4">
+        <div class="col px-4 rounded-4 wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.6s" style="animation-name: fadeIn;">
           <div class="item text-center bg-white rounded-4">
             <header class="thumbnail">
               <img class="w-100 border-top rounded-top-4" src="./src/images/teacher_7.jpg" alt="">
@@ -187,7 +257,7 @@
             </main>
           </div>
         </div>
-        <div class="col px-4 rounded-4">
+        <div class="col px-4 rounded-4 wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.8s" style="animation-name: fadeIn;">
           <div class="item text-center bg-white rounded-4">
             <header class="thumbnail">
               <img class="w-100 border-top rounded-top-4" src="./src/images/teacher_8.jpg" alt="">
@@ -205,10 +275,10 @@
 
   <section class="course pt-lg-5 pt-4 mt-3">
     <div class="container d-flex justify-content-center gap-5">
-      <div class="thumbnail">
+      <div class="thumbnail wow animate__ animate__fadeInLeft animated" data-wow-duration="1.5s" data-wow-delay="0.2s" style="animation-name: fadeInLeft;">
         <img src="./src/images/conatct_inner.png" alt="Contact Image">
       </div>
-      <form action="">
+      <form class="wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.2s" style="animation-name: fadeIn;">
         <div class="form px-4 py-5 shadow-sm h-auto d-flex flex-column rounded-4 bg-white">
           <h1 class="fw-bold text-cappitalize pb-lg-5 pb-4 text-center fs-2">Find Your Course</h1>
   
@@ -251,7 +321,7 @@
     <div class="container">
       <main class="main d-flex justify-content-between w-100 text-white">
         <div class="row w-100">
-          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12 wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.2s" style="animation-name: fadeIn;">
             <div class="links me-4">
               <h2 class="fs-4 text-white text-capitalize fw-bold mb-4">Contact Us</h2>
               <ul class="list-unstyled d-flex flex-column gap-3">
@@ -284,7 +354,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12 wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.4s" style="animation-name: fadeIn;">
             <div class="links me-4">
               <h2 class="fs-4 text-white text-capitalize fw-bold mb-4">Quick links</h2>
               <ul class="list-unstyled d-flex flex-column gap-3">
@@ -303,7 +373,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12 wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.6s" style="animation-name: fadeIn;">
             <div class="links me-4">
               <h2 class="fs-4 text-white text-capitalize fw-bold mb-4">About</h2>
               <ul class="list-unstyled d-flex flex-column gap-3">
@@ -314,7 +384,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12 wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.8s" style="animation-name: fadeIn;">
             <h2 class="fs-4 text-white text-capitalize mb-5 fw-bold">Newsletter</h2>
             <input type="text" class="form-control text-center w-75 text-white rounded-pill fs-7 py-3" placeholder="Your Email">
             <button type="submit" class="btn btn-primary mt-4 w-75 py-3 px-5 fs-7 fw-semibold rounded-pill">SUBSCRIBE</button>
@@ -328,5 +398,12 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
    crossorigin="anonymous"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+   <script>
+       new WOW().init();
+   </script>
+
+   <script src="./js/index.js"></script>
 </body>
 </html> 
