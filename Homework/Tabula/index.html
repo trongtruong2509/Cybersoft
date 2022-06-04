@@ -19,7 +19,7 @@
 </head>
 <body class="position-relative">
 
-  <!-- <div class="sub-nav position-sticky top-0 start-0 zindex-sticky bg-white w-100 shadow-sm">
+  <div class="sub-nav position-sticky top-0 start-0 zindex-sticky bg-white w-100 shadow-sm">
     <div class="d-flex justify-content-end container align-items-center" >
       <ul class="d-flex mb-2 mb-lg-0 list-unstyled me-5">
         <li class="listnav-item pt-2 me-2">
@@ -80,17 +80,17 @@
         </a>
       </div>
     </div>
-  </div> -->
+  </div>
 
-  <header class="header position-relative top-0 start-0 w-100 bg-transparent">
-    <nav class="navbar navbar-expand-lg py-0 bg-transparent">
+  <header class="header position-absolute top-0 start-0 w-100 bg-transparent">
+    <nav class="navbar navbar-expand-xl navbar-light py-0 bg-transparent">
       <div class="container bg-transparent">
-        <a class="navbar-brand py-0 my-0" href="#">
-          <img class="" src="./src/images/crest.png" alt="Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <a class="navbar-brand py-0 my-0" href="#">
+          <img class="logo" src="./src/images/crest.png" alt="Logo">
+        </a>
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item pt-3 me-5">
@@ -151,22 +151,19 @@
         </div>
       </div>
     </nav>
-
-    
-
   </header>
 
   <section class="about position-relative py-lg-6">
-    <div class="container d-flex justify-content-between align-items-center gap-5 px-5">
-      <div class="content wow animate__ animate__fadeInLeft animated" data-wow-duration="1.5s" data-wow-delay="0.2s" style="animation-name: fadeInLeft;">
+    <img class="top-wave w-100 position-absolute top-0 start-0" src="./src/images/yellow_top_wave_01.png" alt="Background top wave">
+    <div class="container d-flex justify-content-between align-items-center gap-5">
+      <div class="content w-lg-50 wow animate__ animate__fadeInLeft animated" data-wow-duration="1.5s" data-wow-delay="0.2s" style="animation-name: fadeInLeft;">
         <h3 class="text-uppercase text-primary fs-6 fw-semibold">about us</h3>
         <h1 class="fs-0 fw-bold">The language teaching experts</h1>
       </div>
-      <div class="thumbnail d-block">
-        <img class="d-block" src="./src/images/hero_team.png" alt="">
+      <div class="thumbnail w-lg-50">
+        <img class="w-100" src="./src/images/hero_team.png" alt="">
       </div>
     </div>
-    <img class="w-100 position-absolute top-0 start-0" src="./src/images/yellow_top_wave_01.png" alt="Background top wave">
   </section>
 
   <section class="profiles pt-5">
@@ -276,13 +273,12 @@
   <section class="course pt-lg-5 pt-4 mt-3">
     <div class="container d-flex justify-content-center gap-5">
       <div class="thumbnail wow animate__ animate__fadeInLeft animated" data-wow-duration="1.5s" data-wow-delay="0.2s" style="animation-name: fadeInLeft;">
-        <img src="./src/images/conatct_inner.png" alt="Contact Image">
+        <img class="w-100" src="./src/images/conatct_inner.png" alt="Contact Image">
       </div>
-      <form class="wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.2s" style="animation-name: fadeIn;">
-        <div class="form px-4 py-5 shadow-sm h-auto d-flex flex-column rounded-4 bg-white">
-          <h1 class="fw-bold text-cappitalize pb-lg-5 pb-4 text-center fs-2">Find Your Course</h1>
-  
-          <div class="input-info d-flex gap-3">
+      <div class="w-100 pt-md-4 wow animate__ animate__animated animate__fadeIn animated" data-wow-duration="0.75s" data-wow-delay="0.2s" style="animation-name: fadeIn;">
+        <div class="form w-100 px-4 py-5 shadow-sm h-auto d-flex flex-column rounded-4 bg-white">
+          <h1 class="fw-bold text-cappitalize pb-lg-5 pb-4 text-center fs-2">Find Your Course</h1> 
+          <div class="w-100 input-info d-flex gap-3">
             <div class="input-group mb-3 position-relative">
               <i class="fa-regular fa-user position-absolute translate-middle text-primary"></i>
               <input type="text" class="form-control position-relative rounded-pill ps-4-5 fs-7 py-2-5" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1">
@@ -295,9 +291,7 @@
           </div>
           <div class="input-group mb-3 position-relative">
             <i class="fa-solid fa-graduation-cap position-absolute translate-middle text-primary"></i>
-            <!-- <input type="text" class="form-control rounded-pill ps-4-5 fs-7 py-2-5" id="basic-url" placeholder="English" aria-describedby="basic-addon3"> -->
             <select class="form-select mb-3 position-relative rounded-pill ps-4-5 fs-7 py-2-5" aria-label="Default select example">
-              <!-- <option selected>Open this select menu</option> -->
               <option value="1">English</option>
               <option value="2">French</option>
               <option value="3">Spanish</option>
@@ -313,7 +307,7 @@
             <button type="submit" class="btn btn-primary mt-5 py-3 px-5 fs-7 fw-semibold rounded-pill">SEND</button>
           </div>
         </div> 
-      </form>
+      </div>
     </div>
   </section>
 

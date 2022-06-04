@@ -31,6 +31,10 @@ body {
 
 .header-visible {
     display: block !important;
+
+    @media screen and (max-width: 1200px) {
+        display: none !important;
+    }
 }
 
 .header-active {
@@ -38,7 +42,7 @@ body {
 }
 
 .header {
-    // z-index: 1 !important;
+    z-index: 700 !important;
     background-color: transparent !important;
 
     .navbar-brand {
@@ -64,12 +68,46 @@ body {
             @include dot-active;
         }
     }
+
+    @media screen and (max-width: 1200px) {
+        background-color: #ffffff !important;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        position: sticky !important;
+
+        .container {
+            justify-content: flex-start !important;
+            gap: 1rem;
+
+            .navbar-brand {
+                img {
+                    width: 3.5rem !important; 
+                }
+            }
+
+        }
+    }
 }
 
 .about {
     z-index: 100 !important;
     background: url('./../src/images/Violet_top_left_wave.png') no-repeat bottom;
     background-size: contain;
+
+    .top-wave {
+        z-index: 50 !important;
+    }
+
+    .container {
+        z-index: 110 !important;
+        position: relative;
+    }
+
+    @media screen and (max-width: 992px) {
+        .container {
+            display: block !important;
+            margin-top: 4rem;
+        }      
+    }
 }
 
 .profiles {
@@ -132,6 +170,21 @@ body {
                 height: 7rem;
             }
         }
+    }
+
+    @media screen and (max-width: 992px) {
+        .container {
+            display: block !important;
+            margin-top: 4rem;
+
+            .form {
+                max-width: 100%;
+
+                h1 {
+                    text-align: left !important;
+                }
+            }
+        }      
     }
 }
 

@@ -12053,12 +12053,19 @@ body {
   display: block !important;
 }
 
+@media screen and (max-width: 1200px) {
+  .header-visible {
+    display: none !important;
+  }
+}
+
 .header-active {
   -webkit-transform: none !important;
           transform: none !important;
 }
 
 .header {
+  z-index: 700 !important;
   background-color: transparent !important;
 }
 
@@ -12091,10 +12098,45 @@ body {
           transform: translateX(-50%);
 }
 
+@media screen and (max-width: 1200px) {
+  .header {
+    background-color: #ffffff !important;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+  }
+  .header .container {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+    gap: 1rem;
+  }
+  .header .container .navbar-brand img {
+    width: 3.5rem !important;
+  }
+}
+
 .about {
   z-index: 100 !important;
   background: url("./../src/images/Violet_top_left_wave.png") no-repeat bottom;
   background-size: contain;
+}
+
+.about .top-wave {
+  z-index: 50 !important;
+}
+
+.about .container {
+  z-index: 110 !important;
+  position: relative;
+}
+
+@media screen and (max-width: 992px) {
+  .about .container {
+    display: block !important;
+    margin-top: 4rem;
+  }
 }
 
 .profiles {
@@ -12158,6 +12200,19 @@ body {
 
 .course .form .input-group textarea {
   height: 7rem;
+}
+
+@media screen and (max-width: 992px) {
+  .course .container {
+    display: block !important;
+    margin-top: 4rem;
+  }
+  .course .container .form {
+    max-width: 100%;
+  }
+  .course .container .form h1, .course .container .form .h1 {
+    text-align: left !important;
+  }
 }
 
 .footer {
