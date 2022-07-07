@@ -23,3 +23,19 @@
       //   }
    }
 }
+
+.filters {
+   .dropdown-toggle {
+      min-width: 90px;
+   }
+}
+
+.modal-dialog {
+   img {
+      height: 80px !important;
+   }
+
+   .toggle-btn:hover {
+      background-color: #d0d3d4;
+   }
+}
