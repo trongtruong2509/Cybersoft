@@ -8,7 +8,7 @@
       &:hover {
          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
          border-color: transparent !important;
-         
+
          & > .thumbnail {
             transform: translateY(-0.5rem);
          }
@@ -61,8 +61,7 @@
    }
 }
 
-.modal-dialog {
-
+.cart-modal {
    .modal-body {
       min-height: 500px !important;
    }
@@ -85,4 +84,18 @@
    content: "You don't have any item in cart.";
    font-size: 1.25rem;
    color: #a1b0b5;
+}
+
+.payment-modal {
+   .modal-body {
+      min-height: 300px !important;
+   }
+
+   img {
+      height: 80px !important;
+   }
+
+   .toggle-btn:hover {
+      background-color: #d0d3d4;
+   }
 }

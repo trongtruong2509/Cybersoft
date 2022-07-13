@@ -4,6 +4,8 @@ const appleFilter = document.getElementById("appleFilter");
 const samsungFilter = document.getElementById("samsungFilter");
 const dropdownMenuBrand = document.getElementById("dropdownMenuBrand");
 const cartItems = document.getElementById("cartItems");
+const paymentItems = document.getElementById("paymentItems");
+const cartBtn = document.getElementById("cartBtn");
 
 let productList = [];
 let cartItemList = [];
@@ -37,25 +39,6 @@ function getProducts() {
       })
       .catch((err) => console.log(err));
 }
-
-// const mapProduct = (data) => {
-//    data.forEach((p) => {
-//       productList.push(
-//          new Product(
-//             p.name,
-//             p.price,
-//             p.type,
-//             p.img,
-//             p.desc,
-//             p.screen,
-//             p.backCamera,
-//             p.frontCamera
-//          )
-//       );
-//    });
-
-//    console.log(productList);
-// };
 
 const renderProducts = (data) => {
    if (data) {
@@ -148,17 +131,56 @@ const renderCartItems = (items) => {
                      </div>
                      <div class="actions mt-4 mb-2 d-flex justify-content-between">
                         <button class="btn btn-outline-secondary" onclick="resetCartList()">CLEAR ALL</button>
-                        <button class="btn btn-outline-success">PURCHASE</button>
+                        <button class="btn btn-outline-success" onclick="openPaymentHandle()">PURCHASE</button>
                      </div>
-                  </div>`
+                  </div>`;
    }
 
    cartItems.innerHTML = content;
 };
 
+const renderPayment = (items) => {
+   let content = "";
+   let totalItem = 0;
+   let totalPrice = 0;
+
+   if (items.length) {
+      items.forEach((item) => {
+         totalItem += item.quantity;
+         totalPrice += item.product.price * item.quantity;
+
+         content += `<div class="row">
+                        <div class="row border-bottom my-3 pb-3">
+                           <div class="row main align-items-center">
+                              <div class="col-8">
+                                 <h5>${item.quantity} x ${item.product.name}</h5>
+                              </div>
+                              <div class="col-4 text-end">&dollar; ${item.product.price}</div>
+                           </div>
+                        </div>
+                     </div>`;
+      });
+
+      content += `<div id="paymentSummary" class="row summary mt-4">
+                     <div class="col">
+                        <p class="py-3 fw-bold">Total ${totalItem} will cost &dollar;${totalPrice}. Do you want to make other?</p>
+                     </div>
+
+                     <div class="col-4 offset-8">
+                        <div class="actions mt-4 mb-2 text-end d-flex justify-content-between">
+                           <button class="btn btn-outline-secondary" onclick="canclePayment()">Cancel</button>
+                           <button class="btn btn-success" onclick="orderHandle()">Order Now</button>
+                        </div>
+                     </div>
+                  </div>`;
+   }
+
+   paymentItems.innerHTML = content;
+};
+
 // DOM
-window.addEventListener('load', (e) => {
-   console.log("Window on load")
+window.addEventListener("load", (e) => {
+   console.log("Window on load");
    getProducts();
    getLocalStorage();
    renderCartItems(cartItemList);
@@ -187,6 +209,23 @@ const handleSamsungFilter = () => {
    renderProducts(filtered);
 };
 
+const openPaymentHandle = () => {
+   renderPayment(cartItemList);
+   document.getElementById("openPaymentBtn").click();
+};
+
+const orderHandle = () => {
+   console.log("orderHandle");
+   resetCartList();
+   // close modal
+   document.getElementById("paymentModelCloseBtn").click();
+};
+
+const canclePayment = () => {
+   console.log("canclePayment");
+   document.getElementById("paymentModelCloseBtn").click();
+   cartBtn.click();
+};
 // cart CRUD
 const handleAddCartItem = (id) => {
    console.log("=========== triggered handleAddCartItem with id is " + id);
@@ -237,7 +276,7 @@ const resetCartList = () => {
    cartItemList = [];
    setLocalStorage();
    renderCartItems(cartItemList);
-}
+};
 
 const deleteItem = (id) => {
    const item = cartItemList.find((p) => p.id === id);
@@ -254,17 +293,17 @@ samsungFilter.onclick = handleSamsungFilter;
 
 // Local storage
 function setLocalStorage() {
-   localStorage.setItem('cartItems', JSON.stringify({data: cartItemList}));
+   localStorage.setItem("cartItems", JSON.stringify({ data: cartItemList }));
 }
 
 function getLocalStorage() {
-   var _itemJson = localStorage.getItem('cartItems');
+   var _itemJson = localStorage.getItem("cartItems");
 
    if (_itemJson) {
-       var itemLocals = JSON.parse(_itemJson);
+      var itemLocals = JSON.parse(_itemJson);
 
-       if (itemLocals.data.length) {
-         cartItemList = itemLocals.data.map(p =>( {
+      if (itemLocals.data.length) {
+         cartItemList = itemLocals.data.map((p) => ({
             id: p.id,
             product: new Product(
                p.product.id,
@@ -277,12 +316,12 @@ function getLocalStorage() {
                p.product.backCamera,
                p.product.frontCamera
             ),
-            quantity: p.quantity
+            quantity: p.quantity,
          }));
 
-         console.log("Assrsr")
-       }
-   } 
+         console.log("Assrsr");
+      }
+   }
 
    renderCartItems(cartItemList);
 }

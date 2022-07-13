@@ -1,0 +1,17 @@
+.img-wrapper {
+   height: 100px !important;
+
+   .thumbnail {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+.alert-span {
+   position: absolute;
+   bottom: -20px;
+   left: 0;
+   font-size: 14px !important;
+   color: red !important;
+}

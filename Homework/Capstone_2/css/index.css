@@ -4,29 +4,36 @@
   transition: 0.3s all ease;
   cursor: pointer;
 }
+
 .products .item:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-color: transparent !important;
 }
+
 .products .item:hover > .thumbnail {
   transform: translateY(-0.5rem);
 }
+
 .products .item:hover h1 {
   color: #198754;
 }
+
 .products .item .thumbnail {
   width: 100%;
   height: 240px !important;
   transition: 0.3s all ease;
 }
+
 .products .item .thumbnail img {
   height: 100% !important;
 }
+
 .products .item .detail {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4rem 3.25rem 2.5rem 2.5rem;
 }
+
 .products .item .desc {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -34,8 +41,8 @@
   -webkit-line-clamp: 3;
   /* number of lines to show */
   line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
+
 .products .item span {
   font-size: 1.25rem;
   font-weight: 700;
@@ -45,13 +52,15 @@
   min-width: 90px;
 }
 
-.modal-dialog .modal-body {
+.cart-modal .modal-body {
   min-height: 500px !important;
 }
-.modal-dialog img {
+
+.cart-modal img {
   height: 80px !important;
 }
-.modal-dialog .toggle-btn:hover {
+
+.cart-modal .toggle-btn:hover {
   background-color: #d0d3d4;
 }
 
@@ -64,4 +73,16 @@
   content: "You don't have any item in cart.";
   font-size: 1.25rem;
   color: #a1b0b5;
-}/*# sourceMappingURL=index.css.map */
+}
+
+.payment-modal .modal-body {
+  min-height: 300px !important;
+}
+
+.payment-modal img {
+  height: 80px !important;
+}
+
+.payment-modal .toggle-btn:hover {
+  background-color: #d0d3d4;
+}
