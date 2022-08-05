@@ -15,7 +15,9 @@ export const seatSlice = createSlice({
         remove: (state, actions) => {
             console.log("Enter remove func");
 
-            state.value = state.value.filter((seat) => seat != actions.payload);
+            state.value = state.value.filter(
+                (seat) => seat !== actions.payload
+            );
         },
     },
 });

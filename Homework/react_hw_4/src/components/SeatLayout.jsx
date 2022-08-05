@@ -39,7 +39,7 @@ const SeatLayout = () => {
             <div className="grid grid-flow-row grid-cols-2 gap-8 p-3 m-3 relative">
                 <div className="absolute top-[-4px] left-2">
                     {headerRows.map((row) => (
-                        <p className="w-6 h-6 inline-block mx-1 text-center">
+                        <p className="w-6 h-6 inline-block mx-1 text-center text-primary">
                             {row}
                         </p>
                     ))}
@@ -47,7 +47,7 @@ const SeatLayout = () => {
 
                 <div className="absolute top-[-4px] right-2">
                     {headerRows.map((row) => (
-                        <p className="w-6 h-6 inline-block mx-1 text-center">
+                        <p className="w-6 h-6 inline-block mx-1 text-center text-primary">
                             {row + 6}
                         </p>
                     ))}
@@ -63,7 +63,7 @@ const SeatLayout = () => {
 
                 <div className="absolute bottom-[4px] left-[-16px]">
                     {headerCols.map((row) => (
-                        <p className="w-6 h-6 block my-2 flex items-center justify-center">
+                        <p className="w-6 h-6 my-2 flex items-center justify-center">
                             {String.fromCharCode(row + 69)}
                         </p>
                     ))}

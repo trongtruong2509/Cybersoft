@@ -6,7 +6,7 @@ const Seat = ({ onClick, booked, disable }) => {
     const activate =
         "w-6 h-6 border border-solid border-amber-600 cursor-pointer hover:border-amber-600 bg-amber-600";
     const disableClass =
-        "w-6 h-6 border border-solid border-gray-600 cursor-pointer bg-gray-600";
+        "w-6 h-6 border border-solid border-primary cursor-pointer bg-primary";
 
     return (
         <button
