@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { add, edit } from "../store/userSlice";
 import { update } from "../store/currentUserSlice";
+import { updateSearch } from "../store/searchSlice";
+import { MdSearch } from "react-icons/md";
 
 const UserPannel = () => {
    const users = useSelector((state) => state.user.value);
+   const search = useSelector((state) => state.search.value);
    const currentUser = useSelector((state) => state.currentUser.value);
-   //    const mode = useSelector((state) => state.mode.value);
    const dispatch = useDispatch();
 
    const [id, setId] = useState(null);
@@ -105,8 +107,18 @@ const UserPannel = () => {
 
    return (
       <div className="block text-left text-slate-700">
-         <div className="w-full bg-slate-700 text-2xl py-4 text-white flex justify-center items-center">
-            User Information
+         <div className="w-full bg-slate-700 text-2xl py-4 text-white flex justify-between items-center px-5">
+            <div>User Information</div>
+            <div className="relative w-1/2">
+               <input
+                  type="text"
+                  value={search}
+                  placeholder="Search with user name"
+                  className="bg-slate-100 px-3 py-1 rounded-lg text-base w-full outline-none text-slate-700"
+                  onChange={(e) => dispatch(updateSearch(e.target.value))}
+               />
+               <MdSearch className="absolute top-2 right-2 text-slate-700 " />
+            </div>
          </div>
          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-x-8 py-3">
             <div className="flex flex-col justify-center items-start">
